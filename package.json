@@ -1,0 +1,97 @@
+{
+	"name": "regex-based-selection",
+	"displayName": "Regex Based Selection",
+	"description": "Select text based on custom pre-defined regular expressions with ease either by name or shortcuts.",
+	"publisher": "MarceloLimori",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarceloLimori/regex-based-selection.git"
+	},
+	"activationEvents": [
+		"onCommand:regex-based-selection.useRegex1",
+		"onCommand:regex-based-selection.useRegex2",
+		"onCommand:regex-based-selection.useRegex3",
+		"onCommand:regex-based-selection.useRegex4",
+		"onCommand:regex-based-selection.useRegex5",
+		"onCommand:regex-based-selection.useLastUsed",
+		"onCommand:regex-based-selection.pickFromList"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "regex-based-selection.useRegex1",
+				"title": "Regex Based Selection: Use Regex #1"
+			},
+			{
+				"command": "regex-based-selection.useRegex2",
+				"title": "Regex Based Selection: Use Regex #2"
+			},
+			{
+				"command": "regex-based-selection.useRegex3",
+				"title": "Regex Based Selection: Use Regex #3"
+			},
+			{
+				"command": "regex-based-selection.useRegex4",
+				"title": "Regex Based Selection: Use Regex #4"
+			},
+			{
+				"command": "regex-based-selection.useRegex5",
+				"title": "Regex Based Selection: Use Regex #5"
+			},
+			{
+				"command": "regex-based-selection.useLastUsed",
+				"title": "Regex Based Selection: Use Last Used"
+			},
+			{
+				"command": "regex-based-selection.pickFromList",
+				"title": "Regex Based Selection: Pick From List"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Use Regex",
+			"properties": {
+				"regexBasedSelection.regexList": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"title": "Regex to be used. Format must be name: expression and can't match the empty string.",
+						"pattern": "\\w+[\\s:]+(.*)",
+						"patternErrorMessage": "Regex has invalid format. Must be name: expression. ie: number: [0-9]+ and must not match and empty string."
+					},
+					"default": []
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.0.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
+		"@vscode/test-electron": "^1.6.2"
+	}
+}
