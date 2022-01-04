@@ -19,7 +19,7 @@ To activate the extension, position your cursor where you want and `Ctrl+Shift+P
 | Command                                    | Use                                                                   |
 | ------------------------------------------ | --------------------------------------------------------------------- |
 | `Regex Based Selection: Pick From List`    | Pick an expression from a list of user defined regexes.               |
-| `Regex Based Selection: Use Regex #1 - #5` | Select text based on rules #1 through #5 on the user defined regexes. |
+| `Regex Based Selection: Use Regex 1 - 5`   | Select text based on rules 1 through 5 on the user defined regexes.   |
 | `Regex Based Selection: Use Last Used`     | Reuse the last expression.                                            |
 
 These three commands can be bound to shortcuts, which the extension does not do by default so as to not introduce possible conflicts.
@@ -27,7 +27,7 @@ These three commands can be bound to shortcuts, which the extension does not do 
 
 ## Known Issues/Limitations
 
-There is no way to rename the title for commands like `Regex Based Selection: Use Regex #1`. You'll have to get used to remembering what each entry does (or use the Pick From List command). The VSCode team does not like the idea of allowing extensions to programmatically change it (https://github.com/microsoft/vscode/issues/34048), so this is unlikely to change in the foreseeable future. 
+There is no way to rename the title for commands like `Regex Based Selection: Use Regex 1`. You'll have to get used to remembering what each entry does (or use the Pick From List command). The VSCode team does not like the idea of allowing extensions to programmatically change it (https://github.com/microsoft/vscode/issues/34048), so this is unlikely to change in the foreseeable future. 
 
 You can change the titles manually if you are so inclined.
 
